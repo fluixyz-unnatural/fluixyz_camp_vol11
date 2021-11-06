@@ -12,8 +12,8 @@ const Header = () => {
     { path: "/work", label: "作品管理" },
     { path: "/tech-node", label: "tech-node(dev)" },
     { path: "/graph", label: "graph(dev)" },
-    { path: "/signin", label: "signup" },
-    { path: "/signup", label: "signin" },
+    { path: "/signup", label: "signup" },
+    { path: "/signin", label: "signin" },
   ];
   const handleItemClick = (e: any) => {
     console.log(e.target.innerHTML);
