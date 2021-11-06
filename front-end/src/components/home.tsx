@@ -35,19 +35,19 @@ const Home = () => {
         </Container>
       </div>
       <Grid container columns="3" style={{ marginBottom: "32px" }}>
-        <Grid.Column text>
+        <Grid.Column>
           <Header as="h2">理念</Header>
           <p>
             技術っていろいろレイヤーがあるよね。人が外から確認できるのは究極的には成果物だけなんだから、そこからどれだけ簡単に情報を引き出せるかを考えよう。
           </p>
         </Grid.Column>
-        <Grid.Column text>
+        <Grid.Column>
           <Header as="h2">特徴</Header>
           <p>
             ポートフォリオと使用技術を対応付け、そこからスキルツリーを生成できます。
           </p>
         </Grid.Column>
-        <Grid.Column text>{/* TODO 埋める */}
+        <Grid.Column>{/* TODO 埋める */}
           <Header as="h2">うがあああああああああ</Header>
           <p>ｷｴｷｴ</p>
         </Grid.Column>
