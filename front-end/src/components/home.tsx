@@ -1,10 +1,4 @@
-import {
-  Container,
-  Header,
-  Image,
-  Grid,
-  Button,
-} from "semantic-ui-react";
+import { Container, Header, Image, Grid, Button } from "semantic-ui-react";
 import patternBg from "../assets/pattern-bg.jpg";
 import logo from "../assets/logo.png";
 import { Link } from "react-router-dom";
@@ -28,7 +22,7 @@ const Home = () => {
             position: "absolute",
             bottom: "50px",
             right: "50px",
-            filter: "brightness(0.8)",
+            filter: "drop-shadow(2px 4px 6px black) brightness(0.8)",
           }}
         />
         <Container
