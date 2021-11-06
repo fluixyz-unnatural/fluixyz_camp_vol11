@@ -1,10 +1,17 @@
 import { useState } from "react";
 import { auth } from "../firebase";
 import { Message, Container, Input, Button } from "semantic-ui-react";
+import { useAuthContext } from "../context/AuthContext";
+import { Redirect } from "react-router";
 
 const SignUp = () => {
   const [err, setErr] = useState("");
   const [completion, setCompletion] = useState("");
+
+  const { user } = useAuthContext();
+
+  if (user) return <Redirect to="/" />;
+
   const handleSubmit = (e: any) => {
     e?.preventDefault();
     const { email, password } = e.target.elements;

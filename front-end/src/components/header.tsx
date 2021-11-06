@@ -3,22 +3,22 @@ import { useLocation } from "react-router";
 import { Link } from "react-router-dom";
 import { auth } from "../firebase";
 import LogoImg from "../assets/logo.png";
+import { useAuthContext } from "../context/AuthContext";
 
 // TODO サインイン、サインアップ、サインアウトの切り替え
 
 const Header = () => {
   const now = useLocation().pathname;
+  const { user } = useAuthContext();
   const pages = [
     { path: "/", label: "Home" },
     { path: "/work", label: "作品管理" },
     { path: "/tech-node", label: "tech-node(dev)" },
-    { path: "/graph", label: "graph(dev)" },
-    { path: "/signup", label: "signup" },
-    { path: "/signin", label: "signin" },
+    { path: "/graph", label: "graph(dev)" }
   ];
   const signOut = () => {
     auth.signOut();
-    window.location.href = "/"
+    window.location.href = "/";
   };
   return (
     <Segment inverted>
@@ -30,6 +30,7 @@ const Header = () => {
         {pages.map((e) => {
           return (
             <Menu.Item
+              key={e.label}
               as={Link}
               to={e.path}
               name={e.label}
@@ -38,15 +39,30 @@ const Header = () => {
           );
         })}
         <Menu.Item position="right">
-          <Button as="a" href="/signin" inverted style={{ marginRight: "5px" }}>
-            SignIn
-          </Button>
-          <Button as="a" href="/signup" inverted style={{ marginRight: "5px" }}>
-            SignUp
-          </Button>
-          <Button inverted onClick={signOut}>
-            SignOut
-          </Button>
+          {!user ? (
+            <>
+              <Button
+                as="a"
+                href="/signin"
+                inverted
+                style={{ marginRight: "5px" }}
+              >
+                SignIn
+              </Button>
+              <Button
+                as="a"
+                href="/signup"
+                inverted
+                style={{ marginRight: "5px" }}
+              >
+                SignUp
+              </Button>
+            </>
+          ) : (
+            <Button inverted onClick={signOut}>
+              SignOut
+            </Button>
+          )}
         </Menu.Item>
       </Menu>
     </Segment>
