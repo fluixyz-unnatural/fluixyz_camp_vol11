@@ -1,0 +1,49 @@
+.full-container {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(160deg, #263f53 14%, rgb(63, 28, 28) 91%);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.spacer {
+  height: calc(100vh - 129px);
+}
+
+.gate {
+  color: white;
+  width: 20vw;
+  height: 20vw;
+  text-align: center;
+  line-height: 20vw;
+  font-size: 30px;
+  border: solid 3px;
+  border-radius: 32px;
+  box-sizing: border-box;
+}
+.red {
+  background: rgba(255, 0, 0, 0.1);
+}
+.green {
+  background: rgba(0, 255, 0, 0.1);
+}
+.blue {
+  background: rgba(0, 0, 255, 0.1);
+}
+.neontext {
+  color: #fff;
+  text-shadow: 0 0 7px #fff, 0 0 21px #fff, 0 0 42px #0fa, 0 0 92px #0fa,
+    0 0 151px #0fa;
+}
+
+.node-container {
+  margin: 16px;
+  padding: 16px;
+  border: solid white 1px;
+  border-radius: 8px;
+  box-shadow: inset 0px 0px 3px rgba(255, 255, 255, 0.5);
+  box-shadow: 0px 0px 4x rgba(255, 255, 255, 0.5);
+}

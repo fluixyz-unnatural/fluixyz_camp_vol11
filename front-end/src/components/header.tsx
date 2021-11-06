@@ -13,6 +13,7 @@ const SiteHeader = () => {
     { path: "/work", label: "作品管理" },
     { path: "/post", label: "作品登録" },
     { path: "/graph", label: "graph(dev)" },
+    { path: "/gate", label: "GATE" },
   ];
   const signOut = () => {
     auth.signOut();

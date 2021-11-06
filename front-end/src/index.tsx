@@ -11,6 +11,8 @@ import SignIn from "./components/signin";
 import Home from "./components/home";
 import Post from "./components/post";
 import Footer from "./components/footer"
+import Gate from "./components/gates/gate"
+import LanguageView from "./components/gates/languageView";
 import "semantic-ui-css/semantic.min.css";
 import "./index.css";
 
@@ -25,6 +27,7 @@ ReactDOM.render(
       <Route exact path="/signup" component={SignUp} />
       <Route exact path="/signin" component={SignIn} />
       <Route exact path="/post" component={Post} />
+      <Route path="/gate" component={Gate} />
       <Footer />
     </BrowserRouter>
   </AuthProvider>,
