@@ -1,0 +1,154 @@
+{
+    "tags": [
+        {
+            "tag": "javascript",
+            "child": [
+                "vue",
+                "react",
+                "angular"
+            ]
+        },
+        {
+            "tag": "python",
+            "child": [
+                "flask",
+                "django"
+            ]
+        },
+        {
+            "tag": "go",
+            "child": []
+        },
+        {
+            "tag": "cpp",
+            "child": []
+        },
+        {
+            "tag": "ruby",
+            "child": [
+                "ruby-on-rails"
+            ]
+        },
+        {
+            "tag": "typescript",
+            "child": [
+                "react",
+                "vue",
+                "angular"
+            ]
+        },
+        {
+            "tag": "html",
+            "child": [
+                "react",
+                "vue",
+                "angular"
+            ]
+        },
+        {
+            "tag": "css",
+            "child": [
+                "semantic-ui",
+                "tailwind"
+            ]
+        },
+        {
+            "tag": "web-api",
+            "child": [
+                "web-audio-api",
+                "canvas-api"
+            ]
+        },
+        {
+            "tag": "nginx",
+            "child": []
+        },
+        {
+            "tag": "apache",
+            "child": []
+        },
+        {
+            "tag": "aws",
+            "child": [
+                "ec2",
+                "ecs",
+                "lambda",
+                "s3",
+                "amplify"
+            ]
+        },
+        {
+            "tag": "gcp",
+            "child": [
+                "firebase",
+                "cloud-function",
+                "compute-engine",
+                "cloud-storage",
+                "cloud-sql"
+            ]
+        },
+        {
+            "tag": "container",
+            "child": [
+                "docker",
+                "docker-compose"
+            ]
+        },
+        {
+            "tag": "language",
+            "child": [
+                "javascript",
+                "python",
+                "go",
+                "cpp",
+                "ruby",
+                "html"
+            ]
+        },
+        {
+            "tag": "front-end",
+            "child": [
+                "javascript",
+                "html",
+                "css",
+                "web-api"
+            ]
+        },
+        {
+            "tag": "infra",
+            "child": [
+                "aws",
+                "gcp",
+                "container"
+            ]
+        },
+        {
+            "tag": "nodejs",
+            "child": []
+        },
+        {
+            "tag": "semantic-ui",
+            "child": []
+        },
+        {
+            "tag": "vue",
+            "child": [
+                "nuxtjs"
+            ]
+        },
+        {
+            "tag": "react",
+            "child": [
+                "nextjs"
+            ]
+        },
+        {
+            "tag": "nuxtjs",
+            "child": []
+        },
+        {
+            "tag": "nextjs",
+            "child": []
+        }
+    ]
+}

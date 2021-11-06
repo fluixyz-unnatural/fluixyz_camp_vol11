@@ -1,0 +1,90 @@
+{
+    "language": [
+        "javascript",
+        "python",
+        "go",
+        "rust",
+        "cpp",
+        "c",
+        "java",
+        "bash",
+        "c#",
+        "kotlin",
+        "lua",
+        "perl",
+        "PHP",
+        "ruby",
+        "swift"
+    ],
+    "front": {
+        "script": [
+            "javascript",
+            "typescript"
+        ],
+        "css": [
+            "semantic-ui",
+            "tailwind"
+        ],
+        "framework": [
+            "react",
+            "vue"
+        ],
+        "web-api": [
+            "web-audio-api",
+            "canvas-api"
+        ]
+    },
+    "back": {
+        "server": [
+            "nginx",
+            "apache"
+        ]
+    },
+    "infra": {
+        "aws": [
+            "ec2",
+            "elb",
+            "vpc",
+            "ecs",
+            "lambda",
+            "s3",
+            "cloudfront",
+            "rds",
+            "aurora",
+            "dynamodb",
+            "elasticcache",
+            "ses",
+            "sns",
+            "sqs",
+            "api-gateway",
+            "amplify"
+        ],
+        "gcp": [
+            "firebase",
+            "cloud-function",
+            "compute-engine",
+            "app-engine",
+            "kubernetes-engine",
+            "cloud-storage",
+            "cloud-sql",
+            "bigtable"
+        ],
+        "container": [
+            "docker",
+            "docker-compose",
+            "kubernetes"
+        ]
+    },
+    "others": {
+        "ci/cd": [
+            "github-acitions"
+        ],
+        "code": [
+            "git",
+            "github"
+        ],
+        "engine": [
+            "unity"
+        ]
+    }
+}

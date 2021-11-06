@@ -1,0 +1,224 @@
+[
+    {
+        "tag": "javascript",
+        "type": "language",
+        "domain": "front-end"
+    },
+    {
+        "tag": "python",
+        "type": "language",
+        "domain": "back-end"
+    },
+    {
+        "tag": "go",
+        "type": "language",
+        "domain": "back-end"
+    },
+    {
+        "tag": "cpp",
+        "type": "language",
+        "domain": "others"
+    },
+    {
+        "tag": "ruby",
+        "type": "language",
+        "domain": "back-end"
+    },
+    {
+        "tag": "typescript",
+        "type": "language",
+        "domain": "front-end"
+    },
+    {
+        "tag": "html",
+        "type": "language",
+        "domain": "front-end"
+    },
+    {
+        "tag": "css",
+        "type": "language",
+        "domain": "front-end"
+    },
+    {
+        "tag": "semantic-ui",
+        "type": "framework",
+        "language": "css",
+        "domain": "front-end"
+    },
+    {
+        "tag": "vue",
+        "type": "framework",
+        "language": "javascript",
+        "domain": "front-end"
+    },
+    {
+        "tag": "react",
+        "type": "framework",
+        "language": "javascript",
+        "domain": "front-end"
+    },
+    {
+        "tag": "express",
+        "type": "framework",
+        "language": "javascript",
+        "domain": "back-end"
+    },
+    {
+        "tag": "ruby-on-rails",
+        "type": "framework",
+        "language": "ruby",
+        "domain": "back-end"
+    },
+    {
+        "tag": "flask",
+        "type": "framework",
+        "language": "python",
+        "domain": "back-end"
+    },
+    {
+        "tag": "django",
+        "type": "framework",
+        "language": "python",
+        "domain": "back-end"
+    },
+    {
+        "tag": "three-js",
+        "type": "library",
+        "language": "javascript",
+        "domain": "front-end"
+    },
+    {
+        "tag": "nuxtjs",
+        "type": "plugin",
+        "framework": "vue",
+        "domain": "front-end"
+    },
+    {
+        "tag": "nextjs",
+        "type": "plugin",
+        "framework": "react",
+        "domain": "front-end"
+    },
+    {
+        "tag": "nginx",
+        "type": "application",
+        "domain": "infrastructure"
+    },
+    {
+        "tag": "apache",
+        "type": "application",
+        "domain": "infrastructure"
+    },
+    {
+        "tag": "docker",
+        "type": "application",
+        "domain": "infrastructure"
+    },
+    {
+        "tag": "ec2",
+        "type": "cloud",
+        "domain": "infrastructure",
+        "others": [
+            "aws"
+        ]
+    },
+    {
+        "tag": "ecs",
+        "type": "cloud",
+        "domain": "infrastructure",
+        "others": [
+            "aws",
+            "container"
+        ]
+    },
+    {
+        "tag": "lambda",
+        "type": "cloud",
+        "domain": "infrastructure",
+        "others": [
+            "aws",
+            "serverless"
+        ]
+    },
+    {
+        "tag": "s3",
+        "type": "cloud",
+        "domain": "infrastructure",
+        "others": [
+            "aws",
+            "object-storage"
+        ]
+    },
+    {
+        "tag": "amplify",
+        "type": "cloud",
+        "domain": "infrastructure",
+        "others": [
+            "aws",
+            "serverless"
+        ]
+    },
+    {
+        "tag": "firebase",
+        "type": "cloud",
+        "domain": "infrastructure",
+        "others": [
+            "gcp",
+            "serverless"
+        ]
+    },
+    {
+        "tag": "cloud-functions",
+        "type": "cloud",
+        "domain": "infrastructure",
+        "others": [
+            "gcp",
+            "serverless"
+        ]
+    },
+    {
+        "tag": "compute-engine",
+        "type": "cloud",
+        "domain": "infrastructure",
+        "others": [
+            "gcp"
+        ]
+    },
+    {
+        "tag": "cloud-storage",
+        "type": "cloud",
+        "domain": "infrastructure",
+        "others": [
+            "gcp",
+            "object-storage"
+        ]
+    },
+    {
+        "tag": "container",
+        "type": "environment",
+        "domain": "infrastructure"
+    },
+    {
+        "tag": "nodejs",
+        "type": "environment",
+        "domain": "back-end"
+    },
+    {
+        "tag": "docker",
+        "type": "environment",
+        "domain": "infrastructure",
+        "other": [
+            "container"
+        ]
+    },
+    {
+        "tag": "web-audio-api",
+        "type": "web-api",
+        "domain": "front-end"
+    },
+    {
+        "tag": "github-actions",
+        "type": "ci/cd",
+        "domain": "infrastructure"
+    }
+]

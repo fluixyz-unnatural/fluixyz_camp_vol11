@@ -1,0 +1,10 @@
+version: '3.9'
+
+services:
+  node:
+    build: ./front-end
+    container_name: campfront
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./front-end:/app
