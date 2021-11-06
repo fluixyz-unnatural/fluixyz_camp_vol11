@@ -47,7 +47,7 @@ const Home = () => {
             ポートフォリオと使用技術を対応付け、そこからスキルツリーを生成できます。
           </p>
         </Grid.Column>
-        <Grid.Column text>// TODO 埋める
+        <Grid.Column text>{/* TODO 埋める */}
           <Header as="h2">うがあああああああああ</Header>
           <p>ｷｴｷｴ</p>
         </Grid.Column>
