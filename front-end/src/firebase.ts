@@ -1,6 +1,7 @@
 import firebase from 'firebase/compat/app'
 import 'firebase/compat/auth'
-import 'firebase/compat/database'
+import 'firebase/compat/firestore'
+import 'firebase/compat/storage'
 
 const {
   REACT_APP_FIREBASE_API_KEY,
@@ -23,8 +24,9 @@ const firebaseConfig = {
 
 firebase.initializeApp(firebaseConfig)
 export const auth = firebase.auth();
-// export const messagesRef = database.ref('messages')
+export const db = firebase.firestore();
+export const storage = firebase.storage();
 
-// export const pushMessage = ({ name, text }: any) => {
-//   messagesRef.push({ name, text })
-// }
+export const fullpath2url = (fullpath: string) => {
+  return storage.ref(fullpath).getDownloadURL();
+}

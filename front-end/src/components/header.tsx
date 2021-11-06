@@ -13,7 +13,7 @@ const Header = () => {
   const pages = [
     { path: "/", label: "Home" },
     { path: "/work", label: "作品管理" },
-    { path: "/tech-node", label: "tech-node(dev)" },
+    { path: "/post", label: "作品登録" },
     { path: "/graph", label: "graph(dev)" }
   ];
   const signOut = () => {
