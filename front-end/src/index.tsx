@@ -17,16 +17,12 @@ ReactDOM.render(
     <AuthProvider>
       <BrowserRouter>
         <Header />
-        <div
-          style={{ marginTop: "50px", marginLeft: "30px", marginRight: "30px" }}
-        >
-          <Route exact path="/" component={Home} />
-          <Route exact path="/work" component={Work} />
-          <Route exact path="/tech-node" component={TechNode} />
-          <Route exact path="/graph" component={DirectedGraph} />
-          <Route exact path="/signup" component={SignUp} />
-          <Route exact path="/signin" component={SignIn} />
-        </div>
+        <Route exact path="/" component={Home} />
+        <Route exact path="/work" component={Work} />
+        <Route exact path="/tech-node" component={TechNode} />
+        <Route exact path="/graph" component={DirectedGraph} />
+        <Route exact path="/signup" component={SignUp} />
+        <Route exact path="/signin" component={SignIn} />
       </BrowserRouter>
     </AuthProvider>
   </React.StrictMode>,
