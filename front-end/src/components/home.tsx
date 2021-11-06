@@ -1,5 +1,10 @@
-import { url } from "inspector";
-import { Container, Header, Image, Grid, Button } from "semantic-ui-react";
+import {
+  Container,
+  Header,
+  Image,
+  Grid,
+  Button,
+} from "semantic-ui-react";
 import patternBg from "../assets/pattern-bg.jpg";
 import logo from "../assets/logo.png";
 import { Link } from "react-router-dom";
@@ -19,9 +24,20 @@ const Home = () => {
         <Image
           src={logo}
           size="large"
-          style={{ position: "absolute", bottom: "50px", right: "50px", filter:"brightness(0.8)" }}
+          style={{
+            position: "absolute",
+            bottom: "50px",
+            right: "50px",
+            filter: "brightness(0.8)",
+          }}
         />
-        <Container style={{ position: "absolute", bottom: "50px", textShadow:"1px 1px 10px black" }}>
+        <Container
+          style={{
+            position: "absolute",
+            bottom: "50px",
+            textShadow: "1px 1px 10px black",
+          }}
+        >
           <Header as="h1" style={{ color: "white" }}>
             Gaming Portfolio
           </Header>
@@ -34,7 +50,11 @@ const Home = () => {
           </p>
         </Container>
       </div>
-      <Grid container columns="3" style={{ marginBottom: "32px" }}>
+      <Grid
+        container
+        columns="3"
+        style={{ marginBottom: "32px", minHeight: "300px" }}
+      >
         <Grid.Column>
           <Header as="h2">理念</Header>
           <p>
@@ -61,6 +81,7 @@ const Home = () => {
         style={{
           display: "block",
           margin: "auto",
+          marginTop: "100px",
           marginBottom: "30px",
           width: "300px",
         }}
