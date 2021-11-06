@@ -5,7 +5,6 @@ import { auth } from "../firebase";
 import LogoImg from "../assets/logo.png";
 import { useAuthContext } from "../context/AuthContext";
 
-// TODO サインイン、サインアップ、サインアウトの切り替え
 
 const Header = () => {
   const now = useLocation().pathname;
@@ -14,7 +13,7 @@ const Header = () => {
     { path: "/", label: "Home" },
     { path: "/work", label: "作品管理" },
     { path: "/post", label: "作品登録" },
-    { path: "/graph", label: "graph(dev)" }
+    { path: "/graph", label: "graph(dev)" },
   ];
   const signOut = () => {
     auth.signOut();
