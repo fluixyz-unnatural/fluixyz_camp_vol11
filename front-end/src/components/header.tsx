@@ -1,12 +1,11 @@
-import { Menu, Segment, Image, Button } from "semantic-ui-react";
+import { Menu, Segment, Image, Button, Header } from "semantic-ui-react";
 import { useLocation } from "react-router";
 import { Link } from "react-router-dom";
 import { auth } from "../firebase";
 import LogoImg from "../assets/logo.png";
 import { useAuthContext } from "../context/AuthContext";
 
-
-const Header = () => {
+const SiteHeader = () => {
   const now = useLocation().pathname;
   const { user } = useAuthContext();
   const pages = [
@@ -24,7 +23,9 @@ const Header = () => {
       <Menu stackable inverted fixed="top" size="large">
         <Menu.Item as={Link} to="/">
           <Image size="mini" src={LogoImg} style={{ marginRight: "1.5em" }} />
-          ゲーミングポートフォリオ
+          <Header inverted size="small" style={{ marginTop: "0.2rem" }}>
+            ゲーミングポートフォリオ
+          </Header>
         </Menu.Item>
         {pages.map((e) => {
           return (
@@ -68,4 +69,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default SiteHeader;
