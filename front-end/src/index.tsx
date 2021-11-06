@@ -13,18 +13,16 @@ import "semantic-ui-css/semantic.min.css";
 import "./index.css";
 
 ReactDOM.render(
-  <React.StrictMode>
-    <AuthProvider>
-      <BrowserRouter>
-        <Header />
-        <Route exact path="/" component={Home} />
-        <Route exact path="/work" component={Work} />
-        <Route exact path="/tech-node" component={TechNode} />
-        <Route exact path="/graph" component={DirectedGraph} />
-        <Route exact path="/signup" component={SignUp} />
-        <Route exact path="/signin" component={SignIn} />
-      </BrowserRouter>
-    </AuthProvider>
-  </React.StrictMode>,
+  <AuthProvider>
+    <BrowserRouter>
+      <Header />
+      <Route exact path="/" component={Home} />
+      <Route exact path="/work" component={Work} />
+      <Route exact path="/tech-node" component={TechNode} />
+      <Route exact path="/graph" component={DirectedGraph} />
+      <Route exact path="/signup" component={SignUp} />
+      <Route exact path="/signin" component={SignIn} />
+    </BrowserRouter>
+  </AuthProvider>,
   document.getElementById("root")
 );
