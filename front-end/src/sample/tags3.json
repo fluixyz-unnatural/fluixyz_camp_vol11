@@ -17,7 +17,7 @@
     {
         "tag": "cpp",
         "type": "language",
-        "domain": "others"
+        "domain": "genre"
     },
     {
         "tag": "ruby",
@@ -118,7 +118,7 @@
         "tag": "ec2",
         "type": "cloud",
         "domain": "infrastructure",
-        "others": [
+        "genre": [
             "aws"
         ]
     },
@@ -126,7 +126,7 @@
         "tag": "ecs",
         "type": "cloud",
         "domain": "infrastructure",
-        "others": [
+        "genre": [
             "aws",
             "container"
         ]
@@ -135,7 +135,7 @@
         "tag": "lambda",
         "type": "cloud",
         "domain": "infrastructure",
-        "others": [
+        "genre": [
             "aws",
             "serverless"
         ]
@@ -144,7 +144,7 @@
         "tag": "s3",
         "type": "cloud",
         "domain": "infrastructure",
-        "others": [
+        "genre": [
             "aws",
             "object-storage"
         ]
@@ -153,7 +153,7 @@
         "tag": "amplify",
         "type": "cloud",
         "domain": "infrastructure",
-        "others": [
+        "genre": [
             "aws",
             "serverless"
         ]
@@ -162,7 +162,7 @@
         "tag": "firebase",
         "type": "cloud",
         "domain": "infrastructure",
-        "others": [
+        "genre": [
             "gcp",
             "serverless"
         ]
@@ -171,7 +171,7 @@
         "tag": "cloud-functions",
         "type": "cloud",
         "domain": "infrastructure",
-        "others": [
+        "genre": [
             "gcp",
             "serverless"
         ]
@@ -180,7 +180,7 @@
         "tag": "compute-engine",
         "type": "cloud",
         "domain": "infrastructure",
-        "others": [
+        "genre": [
             "gcp"
         ]
     },
@@ -188,7 +188,7 @@
         "tag": "cloud-storage",
         "type": "cloud",
         "domain": "infrastructure",
-        "others": [
+        "genre": [
             "gcp",
             "object-storage"
         ]
