@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react";
 import { Card, Image, Container } from "semantic-ui-react";
 import Tag from "./tag";
 import { db, fullpath2url } from "../firebase";
-import { query, where, getDocs } from "firebase/firestore";
+import { useAuthContext } from "../context/AuthContext";
+import hash from "object-hash"
 
 interface WorkCardProps {
   title: string;
@@ -17,7 +18,9 @@ const WorkCard = (props: WorkCardProps) => {
   console.log("workcard", props);
   const [src, setSrc] = useState("");
   useEffect(async () => {
-    fullpath2url(`images/thumbnail/${props.thumbnail}`).then((src)=>setSrc(src));
+    fullpath2url(`images/thumbnail/${props.thumbnail}`).then((src) =>
+      setSrc(src)
+    );
     console.log(src);
   }, []);
   return (
@@ -36,11 +39,13 @@ const WorkCard = (props: WorkCardProps) => {
 
 function Work() {
   const [works, setWorks] = useState<WorkCardProps[]>([]);
+  const { user }: any = useAuthContext();
+
   useEffect(async () => {
     const workss: Array<WorkCardProps> = [];
     await db
       .collection("works")
-      .where("author", "==", "1172666a4bb492c1c628da391fe3cdde")
+      .where("author", "==", hash.MD5(user.email))
       .get()
       .then((snapshot) => {
         snapshot.forEach((doc) => {
@@ -60,7 +65,7 @@ function Work() {
   }, []);
   console.log(works);
   return (
-    <section style={{ marginTop: "64px" ,minHeight:"84vh"}}>
+    <section style={{ marginTop: "64px", minHeight: "84vh" }}>
       <Container>
         <h2>登録作品一覧</h2>
         <Card.Group>
