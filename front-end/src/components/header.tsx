@@ -1,6 +1,7 @@
-import { Menu, Segment, Image } from "semantic-ui-react";
-import { useLocation, Router } from "react-router";
+import { Menu, Segment, Image, Button } from "semantic-ui-react";
+import { useLocation } from "react-router";
 import { Link } from "react-router-dom";
+import { auth } from "../firebase";
 import LogoImg from "../assets/logo.png";
 
 // TODO サインイン、サインアップ、サインアウトの切り替え
@@ -15,8 +16,9 @@ const Header = () => {
     { path: "/signup", label: "signup" },
     { path: "/signin", label: "signin" },
   ];
-  const handleItemClick = (e: any) => {
-    console.log(e.target.innerHTML);
+  const signOut = () => {
+    auth.signOut();
+    window.location.href = "/"
   };
   return (
     <Segment inverted>
@@ -31,11 +33,21 @@ const Header = () => {
               as={Link}
               to={e.path}
               name={e.label}
-              onClick={handleItemClick}
               active={now === e.path}
             />
           );
         })}
+        <Menu.Item position="right">
+          <Button as="a" href="/signin" inverted style={{ marginRight: "5px" }}>
+            SignIn
+          </Button>
+          <Button as="a" href="/signup" inverted style={{ marginRight: "5px" }}>
+            SignUp
+          </Button>
+          <Button inverted onClick={signOut}>
+            SignOut
+          </Button>
+        </Menu.Item>
       </Menu>
     </Segment>
   );
