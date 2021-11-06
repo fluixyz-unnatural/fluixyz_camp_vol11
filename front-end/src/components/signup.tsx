@@ -10,7 +10,7 @@ const SignUp = () => {
 
   const { user } = useAuthContext();
 
-  if (user) return <Redirect to="/" />;
+  if (auth.currentUser?.emailVerified) return <Redirect to="/" />;
 
   const handleSubmit = (e: any) => {
     e?.preventDefault();
@@ -19,7 +19,9 @@ const SignUp = () => {
     auth
       .createUserWithEmailAndPassword(email.value, password.value)
       .then((user) => {
-        setCompletion("complete");
+        auth.currentUser?.sendEmailVerification().then(() => {
+          setCompletion("complete");
+        });
       })
       .catch((err: Error) => {
         setErr(err.message);
@@ -60,7 +62,10 @@ const SignUp = () => {
             <Button primary>登録</Button>
           </form>
         ) : (
-          <p>登録が完了しました</p>
+          <>
+            <p style={{ marginTop: "30px" }}>認証メールを送信しました。</p>
+            <p>メール内のリンクをクリックしてください。</p>
+          </>
         )}
       </Container>
     </div>
