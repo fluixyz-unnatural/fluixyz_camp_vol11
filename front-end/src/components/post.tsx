@@ -1,7 +1,6 @@
 import { Form, Button, Container, Header } from "semantic-ui-react";
 import TagInput from "./tagInput";
-import { db, storage, fullpath2url } from "../firebase";
-import { SyntheticEvent } from "react";
+import { db, storage } from "../firebase";
 import { v4 } from "uuid";
 import hash from "object-hash";
 import { useAuthContext } from "../context/AuthContext";
@@ -93,7 +92,7 @@ const Post = () => {
       });
   };
   return (
-    <>
+    <div style={{minHeight:"83vh"}}>
       <div style={{ marginTop: "64px" }}></div>
       <Container text>
         <Header as="h2">作品を登録する</Header>
@@ -123,7 +122,7 @@ const Post = () => {
           </Button>
         </Form>
       </Container>
-    </>
+    </div>
   );
 };
 
