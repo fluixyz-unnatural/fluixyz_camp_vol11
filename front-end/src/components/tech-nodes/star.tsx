@@ -11,8 +11,8 @@ const Star = (props: Props) => {
   for (let i = props.level; i < 5; i++) stars.push(0);
   return (
     <div style={{ marginTop: "-10px" }}>
-      {stars.map((s) => (
-        <Icon name={s === 1 ? "star" : "star outline"}></Icon>
+      {stars.map((s,index) => (
+        <Icon key={index} name={s === 1 ? "star" : "star outline"}></Icon>
       ))}
     </div>
   );
