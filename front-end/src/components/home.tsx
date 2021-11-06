@@ -16,12 +16,12 @@ const Home = () => {
           marginBottom: "50px",
         }}
       >
+        <Image
+          src={logo}
+          size="large"
+          style={{ position: "absolute", bottom: "50px", right: "50px", filter:"brightness(0.8)" }}
+        />
         <Container style={{ position: "absolute", bottom: "50px" }}>
-          <Image
-            src={logo}
-            size="large"
-            style={{ position: "absolute", bottom: "10px", right: "10px" }}
-          />
           <Header as="h1" style={{ color: "white" }}>
             Gaming Portfolio
           </Header>
@@ -47,8 +47,9 @@ const Home = () => {
             ポートフォリオと使用技術を対応付け、そこからスキルツリーを生成できます。
           </p>
         </Grid.Column>
-        <Grid.Column>{/* TODO 埋める */}
-          <Header as="h2">うがあああああああああ</Header>
+        <Grid.Column>
+          {/* TODO 埋める */}
+          <Header as="h2">ウーッッ</Header>
           <p>ｷｴｷｴ</p>
         </Grid.Column>
       </Grid>
