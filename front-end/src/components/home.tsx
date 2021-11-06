@@ -21,7 +21,7 @@ const Home = () => {
           size="large"
           style={{ position: "absolute", bottom: "50px", right: "50px", filter:"brightness(0.8)" }}
         />
-        <Container style={{ position: "absolute", bottom: "50px" }}>
+        <Container style={{ position: "absolute", bottom: "50px", textShadow:"1px 1px 10px black" }}>
           <Header as="h1" style={{ color: "white" }}>
             Gaming Portfolio
           </Header>
