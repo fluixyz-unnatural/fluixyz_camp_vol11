@@ -17,12 +17,12 @@ const WorkCard = (props: WorkCardProps) => {
   console.log("workcard", props);
   const [src, setSrc] = useState("");
   useEffect(async () => {
-    setSrc(await fullpath2url(`images/thumbnail/${props.thumbnail}`));
+    fullpath2url(`images/thumbnail/${props.thumbnail}`).then((src)=>setSrc(src));
     console.log(src);
   }, []);
   return (
     <Card>
-      <Image src={src} />
+      <Image src={src} height="160px" />
       <Card.Content>
         <Card.Header>{props.title}</Card.Header>
         <Card.Description>{props.summary}</Card.Description>
@@ -60,9 +60,9 @@ function Work() {
   }, []);
   console.log(works);
   return (
-    <section style={{ marginTop: "64px" }}>
+    <section style={{ marginTop: "64px" ,minHeight:"84vh"}}>
       <Container>
-        <h2>作品カードサンプル</h2>
+        <h2>登録作品一覧</h2>
         <Card.Group>
           {works.map((param) => (
             <WorkCard
