@@ -5,6 +5,7 @@ import { v4 } from "uuid";
 import hash from "object-hash";
 import { useAuthContext } from "../context/AuthContext";
 import { useHistory } from "react-router";
+import { useState } from "react";
 
 const sleep = (msec: number) =>
   new Promise((resolve) => setTimeout(resolve, msec));
@@ -15,7 +16,7 @@ const imageTrimming = async (f: File) => {
   const canvas = document.createElement("canvas");
   canvas.width = 640;
   canvas.height = 360;
-  const ctx = canvas.getContext("2d");
+  const ctx: any = canvas.getContext("2d");
   const reader = new FileReader();
   const img: any = document.createElement("Img");
   reader.readAsDataURL(f);
@@ -56,8 +57,9 @@ const imageTrimming = async (f: File) => {
 
 const Post = () => {
   const { user }: any = useAuthContext();
+  const [techs, settechs] = useState<Array<string>>([]);
   const history = useHistory();
-  const handleSubmit = async(e: any) => {
+  const handleSubmit = async (e: any) => {
     //画像を先に上げる
     const storageRef = storage.ref();
     const file = e.target.thumb.files[0];
@@ -65,7 +67,7 @@ const Post = () => {
       alert("file not selected");
       return;
     }
-    const blobThumb = await imageTrimming(file);
+    const blobThumb: any = await imageTrimming(file);
     const filename = v4().toString();
     storageRef
       .child(`images/thumbnail/${filename}`)
@@ -78,10 +80,11 @@ const Post = () => {
       title: e.target.title.value,
       thumbnail: filename,
       summary: e.target.summary.value,
-      techs: [],
+      techs: techs,
       author: hash.MD5(user.email),
       season: e.target.date.value,
     };
+    console.log(params)
     worksRef
       .add(params)
       .then(() => {
@@ -92,7 +95,7 @@ const Post = () => {
       });
   };
   return (
-    <div style={{minHeight:"83vh"}}>
+    <div style={{ minHeight: "83vh" }}>
       <div style={{ marginTop: "64px" }}></div>
       <Container text>
         <Header as="h2">作品を登録する</Header>
@@ -115,7 +118,7 @@ const Post = () => {
           </Form.Field>
           <Form.Field>
             <label>使用技術</label>
-            <TagInput name="taginput" />
+            <TagInput handleChange={settechs} />
           </Form.Field>
           <Button fluid primary type="submit">
             Submit

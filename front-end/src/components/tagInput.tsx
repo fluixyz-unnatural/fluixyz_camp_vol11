@@ -9,7 +9,13 @@ interface Props {
 
 const getParents = (child: string): Array<string> => {
   const t = dependencies.find((elm) => elm.tag === child);
-  return [t.type, t.domain, t.language, t.genre].filter((e) => e !== undefined);
+  const tmp = [t.type, t.domain, t.language].filter((e) => e !== undefined);
+  if (t.genre !== undefined) {
+    t?.genre.forEach((e) => {
+      tmp.push(e);
+    });
+  }
+  return tmp;
 };
 
 const TagInput = (props: Props) => {
@@ -57,17 +63,19 @@ const TagInput = (props: Props) => {
     "algorithm",
   ];
   const input = useRef(null);
-  const handleClick = (e: Event) => {
+  const handleClick = async(e: Event) => {
     e.preventDefault();
     const tmp = [...tags];
     if (!tmp.includes(input.current.value)) tmp.push(input.current.value);
     getParents(input.current.value).forEach((e) => {
       if (!tmp.includes(e)) tmp.push(e);
     });
+    console.log(tmp);
     settags(tmp);
     console.log(tags);
     input.current.value = "";
     // props.handleChange(tags);
+    props.handleChange(tmp);
   };
 
   return (
