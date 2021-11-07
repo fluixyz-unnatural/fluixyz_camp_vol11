@@ -21,7 +21,11 @@ const LanguageView = () => {
           <Node
             key={e}
             label={e}
-            level={works.find((tag) => tag.label == e).level}
+            level={
+              works.find((tag) => tag.label == e) !== undefined
+                ? works.find((tag) => tag.label == e).level
+                : 0
+            }
           />
         );
       })}

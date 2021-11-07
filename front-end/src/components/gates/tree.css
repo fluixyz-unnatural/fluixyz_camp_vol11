@@ -1,0 +1,12 @@
+.tree-container {
+  position: fixed;
+  inset: 0;
+  margin: auto;
+  z-index: 99;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.base-img {
+  transform-origin: top left;
+  filter: brightness(0.5);
+  transform:scale(0.5);
+}

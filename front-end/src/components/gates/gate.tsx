@@ -7,6 +7,7 @@ import { createContext, useState, useEffect } from "react";
 import { db } from "../../firebase";
 import { useAuthContext } from "../../context/AuthContext";
 import hash from "object-hash";
+import FrontEndTree from "./front-end";
 
 interface GateProps {
   label: string;
@@ -72,7 +73,7 @@ const GateIndex = () => {
     "infrastructure",
     "graphic",
     "audio",
-    "algorithm"
+    "algorithm",
   ];
   useEffect(() => {
     const tmp: Array<LevelContext> = [];
@@ -85,7 +86,6 @@ const GateIndex = () => {
       .then((snapshot) => {
         snapshot.forEach((doc) => {
           const data = doc.data();
-          console.log(data.techs);
           data.techs.forEach((tag: string) => {
             if (list.includes(tag)) {
               tmp.find((elm) => elm.label == tag).level++;
@@ -112,6 +112,7 @@ const GateIndex = () => {
           <Route exact path="/gate/domain" component={DomainView} />
           <Route exact path="/gate/genre" component={GenreView} />
         </div>
+        <FrontEndTree />
       </BrowserRouter>
     </WorksContext.Provider>
   );

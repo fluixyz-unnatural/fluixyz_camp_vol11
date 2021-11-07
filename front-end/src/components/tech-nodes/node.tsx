@@ -1,5 +1,5 @@
 import "../gates/gate.css";
-import Star from "./star"
+import Star from "./star";
 
 interface Props {
   label: string;
