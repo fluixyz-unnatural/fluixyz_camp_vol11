@@ -85,7 +85,8 @@
         "tag": "three-js",
         "type": "library",
         "language": "javascript",
-        "domain": "front-end"
+        "domain": "front-end",
+        "genre":["graphic"]
     },
     {
         "tag": "nuxtjs",
@@ -207,14 +208,15 @@
         "tag": "docker",
         "type": "environment",
         "domain": "infrastructure",
-        "other": [
+        "genre": [
             "container"
         ]
     },
     {
         "tag": "web-audio-api",
         "type": "web-api",
-        "domain": "front-end"
+        "domain": "front-end",
+        "genre":["audio"]
     },
     {
         "tag": "github-actions",
