@@ -28,7 +28,7 @@ const SignUp = () => {
       });
   };
   return (
-    <div style={{ marginTop: "65px" }}>
+    <div style={{ marginTop: "65px", marginBottom:"600px" }}>
       <Container textAlign="center">
         <h1>ユーザ登録</h1>
 
