@@ -33,15 +33,45 @@
 .blue {
   background: rgba(0, 0, 255, 0.1);
 }
+.neontext-5 {
+  color: #fff;
+  text-shadow: 0 0 7px #fff, 0 0 21px #fff, 0 0 42px rgb(255, 0, 0), 0 0 92px rgb(255, 0, 0),
+    0 0 151px rgb(192, 0, 0);
+  position: relative;
+}
+
 .neontext {
   color: #fff;
   text-shadow: 0 0 7px #fff, 0 0 21px #fff, 0 0 42px #0fa, 0 0 92px #0fa,
     0 0 151px #0fa;
 }
+.neontext-4 {
+  color: #fff;
+  text-shadow: 0 0 7px #fff, 0 0 151px #0fa;
+}
+.neontext-3 {
+  color: #fff;
+  text-shadow: 0 0 7px #fff, 0 0 151px #0fa;
+}
+
+.neontext-2 {
+  color: #fff;
+  text-shadow: 0 0 7px #fff, 0 0 151px #0fa;
+}
+.neontext-1 {
+  color: #fff;
+  text-shadow: 0 0 7px #fff, 0 0 151px #0fa;
+}
+
+.neontext-0 {
+  color: rgb(223, 223, 223);
+}
 
 .node-container {
   margin: 16px;
   padding: 16px;
+  width: 160px;
+  height:85px;
   border: solid white 1px;
   border-radius: 8px;
   box-shadow: inset 0px 0px 3px rgba(255, 255, 255, 0.5);
