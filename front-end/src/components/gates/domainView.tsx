@@ -1,12 +1,16 @@
 import "./gate.css";
 import Node from "../tech-nodes/node";
+import { WorksContext } from "./gate";
+import { useContext } from "react";
 
 const DomainView = () => {
+  const works = useContext(WorksContext);
+  const list = ["front-end","back-end","infrastructure"]
   return (
     <div>
-      <Node label="front-end" level={1} />
-      <Node label="back-end" level={3} />
-      <Node label="infrastructure" level={3}/>
+      {list.map((e)=>{
+        return <Node key={e} label={e} level={works.find((tag)=>tag.label==e).level} />
+      })}
     </div>
   );
 };

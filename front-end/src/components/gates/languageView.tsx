@@ -1,12 +1,30 @@
 import "./gate.css";
 import Node from "../tech-nodes/node";
-
+import { useContext } from "react";
+import { WorksContext } from "./gate";
 const LanguageView = () => {
+  const works = useContext(WorksContext);
+  const list = [
+    "javascript",
+    "python",
+    "cpp",
+    "go",
+    "ruby",
+    "typescript",
+    "html",
+    "css",
+  ];
   return (
     <div>
-      <Node label="Python" level={1} />
-      <Node label="JavaScript" level={3} />
-      <Node label="C++" level={3}/>
+      {list.map((e) => {
+        return (
+          <Node
+            key={e}
+            label={e}
+            level={works.find((tag) => tag.label == e).level}
+          />
+        );
+      })}
     </div>
   );
 };

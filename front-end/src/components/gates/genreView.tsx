@@ -1,12 +1,22 @@
 import "./gate.css";
 import Node from "../tech-nodes/node";
+import { WorksContext } from "./gate";
+import { useContext } from "react";
 
 const GenreView = () => {
+  const works = useContext(WorksContext);
+  const list = ["graphic", "audio", "algorithm"];
   return (
     <div>
-      <Node label="Graphic" level={1} />
-      <Node label="Algorithm" level={3} />
-      <Node label="Audio" level={3}/>
+      {list.map((e) => {
+        return (
+          <Node
+            key={e}
+            label={e}
+            level={works.find((tag) => tag.label == e).level}
+          />
+        );
+      })}
     </div>
   );
 };

@@ -70,6 +70,9 @@ const GateIndex = () => {
     "front-end",
     "back-end",
     "infrastructure",
+    "graphic",
+    "audio",
+    "algorithm"
   ];
   useEffect(() => {
     const tmp: Array<LevelContext> = [];
@@ -96,9 +99,7 @@ const GateIndex = () => {
     setworks(tmp);
   }, []);
   return (
-    <WorksContext.Provider
-      value={works}
-    >
+    <WorksContext.Provider value={works}>
       <BrowserRouter>
         <div className={"spacer"}></div>
         <div className={"full-container"}>
