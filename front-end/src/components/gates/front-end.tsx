@@ -47,12 +47,13 @@ const FrontEndTree = (props: Props) => {
     console.log(e.nativeEvent.offsetX, e.nativeEvent.offsetY);
   };
   return (
-    <div
-      className={"tree-container"}
-      onClick={() => {
-        props.closeFunction("");
-      }}
-    >
+    <div className={"tree-container"}>
+      <div
+        className={"full-dark"}
+        onClick={() => {
+          props.closeFunction("");
+        }}
+      ></div>
       <img
         onClick={handleClick}
         className={"base-img"}
