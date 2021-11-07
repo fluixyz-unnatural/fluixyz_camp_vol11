@@ -8,7 +8,7 @@
 }
 .base-img {
   transform-origin: top left;
-  filter: brightness(0.5);
+  filter: brightness(1);
   transform: scale(0.5);
 }
 .full-dark {
@@ -17,5 +17,5 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.8);
 }
