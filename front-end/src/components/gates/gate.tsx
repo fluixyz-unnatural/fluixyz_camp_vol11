@@ -13,6 +13,7 @@ interface GateProps {
   label: string;
   path: string;
   color: string;
+  onClick: Function;
 }
 
 interface LevelContext {
@@ -23,16 +24,20 @@ interface LevelContext {
 export const WorksContext = createContext<Array<LevelContext>>([]);
 
 const Gate = (props: GateProps) => {
+  const handleClick = () => {
+    props.onClick(props.path);
+  };
   return (
-    <Link to={props.path}>
+    <div onClick={handleClick}>
       <div className={`gate neontext ${props.color}`}>{props.label}</div>
-    </Link>
+    </div>
   );
 };
 
 const GateIndex = () => {
   const [works, setworks] = useState([]);
   const { user }: any = useAuthContext();
+  const [page, setPage] = useState("none");
   const list = [
     "javascript",
     "python",
@@ -103,16 +108,21 @@ const GateIndex = () => {
       <BrowserRouter>
         <div className={"spacer"}></div>
         <div className={"full-container"}>
-          <Route exact path="/gate">
-            <Gate path="/gate/domain" label="Domain" color="red" />
-            <Gate path="/gate/language" label="Language" color="blue" />
-            <Gate path="/gate/genre" label="Genre" color="green" />
-          </Route>
-          <Route exact path="/gate/language" component={LanguageView} />
-          <Route exact path="/gate/domain" component={DomainView} />
-          <Route exact path="/gate/genre" component={GenreView} />
+          <Gate path="front" label="front-end" color="red" onClick={setPage} />
+          <Gate
+            path="back"
+            label="back-end(WIP)"
+            color="blue"
+            onClick={setPage}
+          />
+          <Gate
+            path="infra"
+            label="Infra(WIP)"
+            color="green"
+            onClick={setPage}
+          />
         </div>
-        <FrontEndTree />
+        {page == "front" ? <FrontEndTree closeFunction={setPage} /> : ""}
       </BrowserRouter>
     </WorksContext.Provider>
   );

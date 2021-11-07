@@ -4,7 +4,11 @@ import { WorksContext } from "./gate";
 import { useContext } from "react";
 import Node from "../tech-nodes/node";
 
-const FrontEndTree = () => {
+interface Props {
+  closeFunction: Function;
+}
+
+const FrontEndTree = (props: Props) => {
   const worksCtx = useContext(WorksContext);
   const nodeWidth = 300;
   const nodeHeight = 200;
@@ -23,7 +27,7 @@ const FrontEndTree = () => {
     "three-js",
     "nextjs",
   ];
-  const pos = {
+  const pos: any = {
     "semantic-ui": { x: 188, y: 250 },
     css: { x: 542, y: 532 },
     "web-audio-api": { x: 1054, y: 342 },
@@ -43,7 +47,12 @@ const FrontEndTree = () => {
     console.log(e.nativeEvent.offsetX, e.nativeEvent.offsetY);
   };
   return (
-    <div className={"tree-container"}>
+    <div
+      className={"tree-container"}
+      onClick={() => {
+        props.closeFunction("");
+      }}
+    >
       <img
         onClick={handleClick}
         className={"base-img"}
